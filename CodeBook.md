@@ -8,7 +8,7 @@
 ### Row Names from matching Activity_Names from activity_labels.txt
 * Activity_Names
 
-### From X_test.txt and X_train.txt
+### Row Names from X_test.txt and X_train.txt
 * tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
 * tBodyAcc-mean()-Z
