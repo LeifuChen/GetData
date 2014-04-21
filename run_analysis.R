@@ -1,0 +1,28 @@
+library("reshape2")
+library("plyr")
+sub_test <- read.table("./test/subject_test.txt")
+X_test <- read.table("./test/X_test.txt")
+y_test <- read.table("./test/y_test.txt")
+test <- cbind(sub_test,y_test,X_test)
+sub_train <- read.table("./train/subject_train.txt")
+X_train <- read.table("./train/X_train.txt")
+y_train <- read.table("./train/y_train.txt")
+train <- cbind(sub_train,y_train,X_train)
+merge_data <- rbind(train,test)
+feature <- read.table("./features.txt")
+colname <- c("Subject","Activity_Code",as.vector(feature$V2))
+colnames(merge_data) <- colname
+mean_data <- merge_data[grep("-mean()",names(merge_data),fixed=TRUE)]
+std_data <- merge_data[grep("-std()",names(merge_data),fixed=TRUE)]
+test_match <- merge_data[,1:2]
+act_lab <- read.table("./activity_labels.txt")
+colnames(act_lab) <- c("Activity_Code","Activity_Name")
+library("plyr")
+sub_act <- join(test_match,act_lab)
+final_data <- cbind(sub_act,mean_data,std_data)
+write.csv(final_data, file="./gacd-w3-data1.txt",row.names=FALSE)
+tidy_data <- read.csv("./gacd-w3-data1.txt")
+tidydata_molt <- melt(final_data, id = c("Subject","Activity_Code","Activity_Name"))
+tidydata_sum <- acast(tidydata_molt, variable ~ Subject+Activity_Name, mean)
+write.csv(tidydata_sum, file="./gacd-w3-data2.txt",row.names=TRUE)
+tidydata_sum_op <- read.csv("./gacd-w3-data2.txt")
