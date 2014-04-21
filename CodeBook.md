@@ -1,12 +1,15 @@
 ## gacd-w3-data1.txt
-### From subject_test.txt and subject_train.txt
+### Row Names from subject_test.txt and subject_train.txt
 * Subject 
-### From y_test.txt and y_train.txt
+
+### Row Names from y_test.txt and y_train.txt
 * Activity_Code
-### Match Activity_Names from activity_labels.txt
+
+### Row Names from matching Activity_Names from activity_labels.txt
 * Activity_Names
+
 ### From X_test.txt and X_train.txt
-*tBodyAcc-mean()-X
+* tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
 * tBodyAcc-mean()-Z
 * tGravityAcc-mean()-X
