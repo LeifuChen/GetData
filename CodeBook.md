@@ -1,12 +1,12 @@
-# gacd-w3-data1.txt
-## From subject_test.txt and subject_train.txt
-### Subject 
-## From y_test.txt and y_train.txt
-### Activity_Code
-## Match Activity_Names from activity_labels.txt
-### Activity_Names
-## From X_test.txt and X_train.txt
-tBodyAcc-mean()-X
+## gacd-w3-data1.txt
+### From subject_test.txt and subject_train.txt
+* Subject 
+### From y_test.txt and y_train.txt
+* Activity_Code
+### Match Activity_Names from activity_labels.txt
+* Activity_Names
+### From X_test.txt and X_train.txt
+*tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
 * tBodyAcc-mean()-Z
 * tGravityAcc-mean()-X
@@ -73,8 +73,8 @@ tBodyAcc-mean()-X
 * fBodyBodyGyroMag-std()
 * fBodyBodyGyroJerkMag-std()
 
-# gacd-w3-data2.txt
-## Column Names
+## gacd-w3-data2.txt
+### Column Names
 * 1_LAYING
 * 1_SITTING
 * 1_STANDING
@@ -255,7 +255,7 @@ tBodyAcc-mean()-X
 * 30_WALKING
 * 30_WALKING_DOWNSTAIRS
 * 30_WALKING_UPSTAIRS
-##Row Names
+### Row Names
 * tBodyAcc-mean()-X
 * tBodyAcc-mean()-Y
 * tBodyAcc-mean()-Z
