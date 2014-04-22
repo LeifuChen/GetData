@@ -2,8 +2,10 @@ How to run analysis_R.script
 ============================
 * Please put the run_analysis.R is in the working directory 
 * Please unzip the data for the poject in the working directory folder "test" and "train"
-* Make sure the run_analysis.R and data for the project (such as folder "test", "train" and other files) are all in the working directory
+* Make sure the run_analysis.R and data for the project (such as folder "test", "train" and other files) are all in the working directory, for example, the screenshot below.
+
 ![image](https://raw.githubusercontent.com/wargamer1988/GetData/master/folder.PNG)
+
 * Run Command: 
 ```
 source("run_analysis.R")
