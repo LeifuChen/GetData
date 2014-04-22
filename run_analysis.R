@@ -1,4 +1,14 @@
-# Please check the detailed explanation of this script in README.md
+# Check the detailed explanation about how this script works in CodeBook.md
+# Check how to run this script in README.md
+
+# Make sure the run_analysis.R and data for the project (such as folder "test", "train" and other files) are all in the working directory
+# Run Command: source("run_analysis.R")
+# Here are the list of important dataframe and files.
+# dataframe "final_data": tidy data set from step1-4
+# dataframe "tidydata_sum": summarized tidy data set from step 5
+# file "gacd-w3-data1.txt": tidy data file from step1-4
+# file "gacd-w3-data2.txt": tidy data file from step5
+
 # Load required packge for the data cleaning
 library("reshape2") 
 library("plyr")
@@ -25,15 +35,15 @@ colnames(merge_data) <- colname
 # Use grep() to extract the selected columns
 mean_data <- merge_data[grep("-mean()",names(merge_data),fixed=TRUE)]
 std_data <- merge_data[grep("-std()",names(merge_data),fixed=TRUE)]
-test_match <- merge_data[,1:2]
+sub_code <- merge_data[,1:2]
 
 # 3.Uses descriptive activity names to name the activities in the data set
 # 4.Appropriately labels the data set with descriptive activity names.
 # Use activity_labels.txt to name the activities of the data frame.
 act_lab <- read.table("./activity_labels.txt")
 colnames(act_lab) <- c("Activity_Code","Activity_Name")
-sub_act <- join(test_match,act_lab)
-final_data <- cbind(sub_act,mean_data,std_data)
+sub_code_name <- join(sub_code,act_lab)
+final_data <- cbind(sub_code_name,mean_data,std_data)
 
 # Generate the tidy data set from Step 1-4.
 write.csv(final_data, file="./gacd-w3-data1.txt",row.names=FALSE)
