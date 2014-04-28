@@ -6,7 +6,7 @@ How to run analysis_R.script
 
 ![image](https://raw.githubusercontent.com/wargamer1988/GetData/master/folder.PNG)
 
-* Run Command: 
+In the window of R, enter the following command to get the tidy dataframe and data file: 
 ```
 source("run_analysis.R")
 ```

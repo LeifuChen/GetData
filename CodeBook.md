@@ -105,23 +105,19 @@ Variables in run_analysis.R
 * y_train: data from y_train.txt 
 * train: merged data from subject_test.txt,X_test.txt, y_test.txt
 * merge_data: combine 'test' and 'train' data frames together to make one data frame.
-
 * feature: data from features.txt
 * colname: column names of the data frame such as "Subject", "Activity_Code", names from features.txt
-
 * mean_data: extracts only the measurements on the mean for each measurement
 * std_data: extracts only the measurements on the standard deviation for each measurement
 * sub_code: only subject and activity_code column from merge_data
-
 * act_lab: data from activity_labels.txt
 * sub_code_label: match the Activity_code and Activity_Name
-* **final_data**: combine all the selected data frame (sub_code_label, mean_data, std_data) into one dataset
-
+* **final_data: combine all the selected data frame (sub_code_label, mean_data, std_data) into one dataset**
 * tidy_data: read data from tidy data file
 
 ### Tidy Data Set from Step5 
 * tidydata_molt: prodcue molten data per Subject, Activity_Code and Activity_Name
-* **tidydata_sum**: generate summarized tidy data with the average of each variable for each activity and each subject. 
+* **tidydata_sum: generate summarized tidy data with the average of each variable for each activity and each subject.** 
 * tidydata_sum_op: read data from summarized tidy data file 
 
 
