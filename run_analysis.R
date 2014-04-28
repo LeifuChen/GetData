@@ -52,8 +52,8 @@ tidy_data <- read.csv("./gacd-w3-data1.txt")
 # 5.Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 # Use "melt()" to produce molten data
 tidydata_molt <- melt(final_data, id = c("Subject","Activity_Code","Activity_Name"))
-# Use "acast()" to generate summarized tidy data
-tidydata_sum <- acast(tidydata_molt, variable ~ Subject+Activity_Name, mean)
+# Use "dcast()" to generate summarized tidy data
+tidydata_sum <- dcast(tidydata_molt, Subject + Activity_Name ~ variable, mean)
 
 # Generate the summarized tidy data set from Step 5.
 write.csv(tidydata_sum, file="./gacd-w3-data2.txt",row.names=TRUE)

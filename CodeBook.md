@@ -78,10 +78,10 @@ tidydata_molt <- melt(tidydata, id = c("Subject","Activity_Code","Activity_Name"
 ```
 
 * Load "plyr" packge to match the Activity_code and Activity_Name
-* Use "acast()" to generate summarized tidy data
+* Use "dcast()" to generate summarized tidy data
 ```
 library("plyr")
-tidydata_sum <- acast(molten, variable ~ Subject+Activity_Name, mean)
+tidydata_sum <- dcast(molten, Subject+Activity_Name ~ variable , mean)
 ```
 
 * Use "write.csv()" function to generate the tidy data file
